@@ -13,16 +13,15 @@ class TodolistController extends Controller
     public function index()
     {
        $data = Todolist::get();
-       foreach($data as $row){
-        echo $row->id , "<br";
-        echo $row->kegiatan , "<br>";
-        echo $row->tanggal , "<br>";
-        echo $row->waku , "<br>";
-        echo $row->keterangan , "<br>";
-        echo $row->status , "<br>";
-       }
-        
-        
+    //    foreach($data as $row){
+    //     echo $row->id , "<br";
+    //     echo $row->kegiatan , "<br>";
+    //     echo $row->tanggal , "<br>";
+    //     echo $row->waku , "<br>";
+    //     echo $row->keterangan , "<br";
+    //     echo $row->status , "<br>";
+    //    }
+        return view('show', compact('data'));
     }
 
     /**
