@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('todolist', [TodolistController::class, 'index'])->name('todolist');
+Route::get('todolist/add', [TodolistController::class, 'create'])->name('add');
+Route::post('todolist/post', [TodolistController::class, 'store'])->name('post');

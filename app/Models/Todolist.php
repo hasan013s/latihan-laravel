@@ -15,6 +15,6 @@ class Todolist extends Model
         'tanggal',
         'waktu',
         'keterangan',
-        'status'
+        'status',
     ];
 }

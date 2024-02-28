@@ -5,16 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #dddddd;
+            background-color: #4caf50;
+            color: white;
+            border-radius: 3px;
+        }
+    </style>
 </head>
 <body>
-    <table border="1">
+    <a href="{{ route('add') }}"><button>Tambahkan data baru </button></a><br>
+    <table>
         <tr>
-            <td>judul</td>
-            <td>tanggal</td>
-            <td>waktu</td>
-            <td>keterangan</td>
-            <td>status</td>
-            <td>aksi</td>
+            <th>Judul</th>
+            <th>Tanggal</th>
+            <th>Waktu</th>
+            <th>Keterangan</th>
+            <th>Status</th>
+            <th>Aksi</th>
         </tr>
         @foreach ($data as $row)
         <tr>
@@ -23,9 +56,8 @@
             <td>{{ $row->waktu }}</td>
             <td>{{ $row->keterangan}}</td>
             <td>{{ $row->status}}</td>
-            <td></td>
         </tr>
         @endforeach
-    </table>    
+    </table>
 </body>
 </html>
